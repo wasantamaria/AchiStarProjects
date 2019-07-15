@@ -1,6 +1,6 @@
 node {
     def app
-    dev registry
+    def registry
 
     stage('Clone repository') {
         /* Let's make sure we have the repository cloned to our workspace */
