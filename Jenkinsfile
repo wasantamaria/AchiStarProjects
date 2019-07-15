@@ -16,6 +16,7 @@ node {
         registryCredential = ‘dockerhub’
         app = docker.build registry + ":$BUILD_NUMBER"
         app.push()
+        app.push("latest")
     }
 
 }
