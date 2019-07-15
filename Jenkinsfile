@@ -13,7 +13,7 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
         registry = "wasantamaria/achistar-1"
-        registryCredential = ‘dockerhub’
+        registryCredential = ‘wasantamaria’
         app = docker.build registry + ":$BUILD_NUMBER"
         app.push()
         app.push("latest")
