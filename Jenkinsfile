@@ -1,5 +1,6 @@
 node {
     def app
+    dev registry
 
     stage('Clone repository') {
         /* Let's make sure we have the repository cloned to our workspace */
@@ -10,8 +11,8 @@ node {
     stage('Build image') {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
-
-        app = docker.build("achiStar")
+        registry = "wasantamaria/achistar-1"
+        app = docker.build registry + ":$BUILD_NUMBER"
     }
 
 }
