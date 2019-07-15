@@ -1,0 +1,1 @@
+echo "Hello World" >> /home/ubuntu/helloWorld.txt
